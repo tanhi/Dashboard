@@ -239,7 +239,7 @@ h3 {
 
 /*Estilos de las gráficas*/
 #graphicImg {
-  width:90%;
+  width:100px;
   display: inline-block;
   margin: 0 auto;
   padding: 0;
@@ -250,7 +250,12 @@ h3 {
 
 /*estilos de las imagens de grafica de forma nomal*/
 .gráficanormal {
-  width: 350px;
+  width: 200px;
+}
+.grafican{
+  width: 200px;
+
+
 }
 
 /*títulos de la gráfica*/
@@ -315,7 +320,7 @@ h3 {
 
 /*contiene todas las gráficas que se van a generar en js en html inicialmente está vacío*/
 .graphic {
-  margin-top: 10px;
+  margin-top: -16px;
   margin-right:0px;
   display: inline-block;
   text-align: center;
@@ -337,7 +342,7 @@ h3 {
   font-size: 0.9em;
   font-weight: bold;
   margin-top: 10px;
-  padding: 40px;
+  padding: 10px;
   text-align: center;
 }
 /*estilo de cajitas de resultado*/
