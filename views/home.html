@@ -59,12 +59,75 @@
           <li id="teachersTab" class="tab" data-tab-select = 'tabTeachers'>Profesores</li>
         </ul>
       </section>
-      <h3 class="titulo-seccion1"> Mis estadísticas</h3>
-      <h3 class="titulo-seccion2"> Mi Sede</h3>
-      <h3 class="titulo-seccion3"> General </h3>
 
       <section class="container-graphics" id="section-overview"> <!--contenedor gráficos-->
+        <section id="mis-estadisticas" class="tab-content">
+          <h3 class="titulo-seccion1"> Mis estadísticas</h3>
+          <!-- TECH SKILLS -->
+          <div class="big-graphic tech-skills">
+            <div>
+              <span>TECH </span>
+              <select name="overall" id="overall-tech" class="select-skills">
+                <optgroup >
+                  <option value="" hidden>SPRINTS</option>
+                  <option value="0">Sprint 1</option>
+                  <option value="1">Sprint 2</option>
+                  <option value="2">Sprint 3</option>
+                  <option value="3">Sprint 4</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="boxes-big-graphics">
+              <div class="box1">
+                <p id="students-tech" class="textDate">-</p>
+                <p class="texTbox"># STUDENTS THAT MEET THE TARGET</p>
+              </div>
+              <div class="box2">
+                <p id="percent-tech" class="textDate">-</p>
+                <p id="change-info-tech" class="texTbox">% OF TOTAL</p>
+              </div>
+            </div>
+          </div>
 
+            <!--<div class="graphic" id="graphicImg">
+              <img class="gráficanormal" src="../assets/images/rectangular-graphic.png" alt="grafico">
+              <img src="../assets/images/circle-graphic.png" alt="grafico">
+              <img src="../assets/images/bar-graph.png" alt="grafico">
+            </div>
+          </div>
+          <!- LIFE SKILLS -->
+          <div class="big-graphic">
+            <div>
+              <span>HSE</span>
+              <select name="overall" id="overall-life" class="select-skills">
+                <optgroup >
+                  <option value="" hidden>SPRINTS</option>
+                  <option value="0">Sprint 1</option>
+                  <option value="1">Sprint 2</option>
+                  <option value="2">Sprint 3</option>
+                  <option value="3">Sprint 4</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="boxes-big-graphics">
+              <div class="box1">
+                <p id="students-life" class="textDate">-</p>
+                <p class="texTbox"># STUDENTS THAT MEET THE TARGET</p>
+              </div>
+              <div class="box2">
+                <p id="percent-life" class="textDate">-</p>
+                <p id="change-info-life" class="texTbox">% OF TOTAL</p>
+              </div>
+            </div>
+            </div>
+          <div class="big-graphic">
+              <span>GRAFICAS</span>
+          </div>
+
+
+        </section>
+        <section id="mi-sede" class="tab-content">
+        <h3 class="titulo-seccion2"> Mi Sede</h3>
         <!-- ENROLLMENT -->
         <div class="small-graphic">
           <span>DATO ALUMNAS DE MI SEDE</span>
@@ -96,22 +159,7 @@
           </div>
           <div class="graphic" id="achiv-chart"></div>
         </div>
-        <!-- NET PROMOTER SCORE -->
-        <div class="small-graphic">
-          <span>NET PROMOTER SCORE (NPS)</span>
-          <div class="container-small-boxes">
-            <div class="small-graphic-boxes">
-              <p id="cumulative-nps" class="textDate">-</p>
-              <p class="texTbox">% CUMULATIVE NPS</p>
-            </div>
-            <div class="small-graphic-boxes">
-              <p id="promoters"></p>
-              <p id="passive"></p>
-              <p id="detractor"></p>
-            </div>
-          </div>
-          <div class="graphic" id="nps-chart"></div>
-        </div>
+
         <!-- STUDENT SATISFACTION -->
         <div class="small-graphic">
           <span>STUDENT SATISFACTION</span>
@@ -123,6 +171,10 @@
           </div>
           <div class="graphic" id="satisfaction-chart"></div>
         </div>
+        </section>
+        <section id="general" class="tab-content">
+        <h3 class="titulo-seccion3"> General </h3>
+
         <!-- TEACHER RATING -->
         <div class="small-graphic">
           <span>TEACHER RATING</span>
@@ -145,60 +197,24 @@
           </div>
           <div class="graphic" id="jedi-chart"></div>
         </div>
-        <!-- TECH SKILLS -->
-        <div class="big-graphic tech-skills">
-          <div>
-            <span>TECH </span>
-            <select name="overall" id="overall-tech" class="select-skills">
-              <optgroup >
-                <option value="" hidden>SPRINTS</option>
-                <option value="0">Sprint 1</option>
-                <option value="1">Sprint 2</option>
-                <option value="2">Sprint 3</option>
-                <option value="3">Sprint 4</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="boxes-big-graphics">
-            <div class="box1">
-              <p id="students-tech" class="textDate">-</p>
-              <p class="texTbox"># STUDENTS THAT MEET THE TARGET</p>
+        <!-- NET PROMOTER SCORE -->
+        <div class="small-graphic">
+          <span>NET PROMOTER SCORE (NPS)</span>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <p id="cumulative-nps" class="textDate">-</p>
+              <p class="texTbox">% CUMULATIVE NPS</p>
             </div>
-            <div class="box2">
-              <p id="percent-tech" class="textDate">-</p>
-              <p id="change-info-tech" class="texTbox">% OF TOTAL</p>
+            <div class="small-graphic-boxes">
+              <p id="promoters"></p>
+              <p id="passive"></p>
+              <p id="detractor"></p>
             </div>
           </div>
-          <!--<div class="graphic" id="graphicImg">
-            <img class="gráficanormal" src="../assets/images/rectangular-graphic.png" alt="grafico">
-            <img src="../assets/images/circle-graphic.png" alt="grafico">
-            <img src="../assets/images/bar-graph.png" alt="grafico">
-          </div>
+          <div class="graphic" id="nps-chart"></div>
         </div>
-        <!- LIFE SKILLS -->
-        <div class="big-graphic">
-          <div>
-            <span>HSE</span>
-            <select name="overall" id="overall-life" class="select-skills">
-              <optgroup >
-                <option value="" hidden>SPRINTS</option>
-                <option value="0">Sprint 1</option>
-                <option value="1">Sprint 2</option>
-                <option value="2">Sprint 3</option>
-                <option value="3">Sprint 4</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="boxes-big-graphics">
-            <div class="box1">
-              <p id="students-life" class="textDate">-</p>
-              <p class="texTbox"># STUDENTS THAT MEET THE TARGET</p>
-            </div>
-            <div class="box2">
-              <p id="percent-life" class="textDate">-</p>
-              <p id="change-info-life" class="texTbox">% OF TOTAL</p>
-            </div>
-          </div>
+      </section>
+
           <!--<div class="graphic" id="graphicImg">
             <img class="gráficanormal" src="../assets/images/rectangular-graphic.png" alt="grafico">
             <img src="../assets/images/circle-graphic.png" alt="grafico">

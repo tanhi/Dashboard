@@ -277,8 +277,8 @@ window.addEventListener('load', function() {
       ]);
 
       var options = {'title': 'Rating otorgado por las alumnas a sus Jedi Master',
-        'width': 500,
-        'height': 300,
+        'width': 300,
+        'height': 150,
         'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
@@ -295,8 +295,8 @@ window.addEventListener('load', function() {
       ]);
 
       var options2 = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
-        'width': 500,
-        'height': 300,
+        'width': 300,
+        'height': 150,
         'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
@@ -313,8 +313,8 @@ window.addEventListener('load', function() {
       ]);
 
       var options3 = {'title': 'Supera, Cumple o No Cumple LABORATORIA las expectativas de las alumnas',
-        'width': 500,
-        'height': 300,
+        'width': 300,
+        'height': 150,
         'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
@@ -332,8 +332,8 @@ window.addEventListener('load', function() {
       ]);
 
       var options4 = {'title': 'Recomendarias LABORATORIA a otras personas',
-        'width': 500,
-        'height': 300,
+        'width': 300,
+        'height': 150,
         'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
@@ -350,8 +350,8 @@ window.addEventListener('load', function() {
       ]);
 
       var options5 = {'title': 'Alumnas que asisten a clases vs alumnas que han desertado',
-        'width': 500,
-        'height': 300,
+        'width': 300,
+        'height': 150,
         'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
@@ -368,8 +368,8 @@ window.addEventListener('load', function() {
       ]);
 
       var options6 = {'title': 'Estudiantes que pasan la meta de puntaje establecido por sprint',
-        'width': 500,
-        'height': 300,
+        'width': 300,
+        'height': 150,
         'colors': ['#f7b617', 'grey', '#4C4743', 'white'],
         'is3D': true};
 
