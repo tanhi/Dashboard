@@ -1,0 +1,574 @@
+/*formatos generales*/
+* {
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*formato de body*/
+body {
+  background-image: url(../assets/images/06-01.jpg);
+  background-repeat: no-repeat;
+ }
+
+
+
+/*------------------------Header----------------------------------*/
+header{ /*aqui formatos para la parte blanca del header*/
+    background-color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 8;
+
+}
+img.foto-perfil {
+    display: inline-block;
+    height: 3%;
+    width: 3%;
+    border-radius: 100%;
+    float: left;
+    margin: 10px;
+}
+strong {
+  float: left;
+  padding-top: 20px;
+  padding-left: 5px;
+
+}
+
+.logo-header { /*dando formato al logo del header*/
+  width: 12%;
+  margin: 0 418px;
+  display: inline-block;
+}
+
+.box-nav {
+    float:right;
+}
+
+.box-nav ul li {
+  float:right;
+  list-style: none;
+  margin: 15px 10px;
+  margin bottom:: 5px;
+}
+
+.fa {/*Agregando POINTER a todos los iconos */
+  cursor: pointer;
+}
+
+/*estilo cuando paso el raton por los iconos que despliegan el perfil y el chat*/
+.fa-bars:hover {
+  color: #f7b617;
+
+}
+
+
+/*estilos a la caja amarilla que contiene selector y las vistas*/
+.box-filter {
+  color: #ffffff;
+  text-align: left;
+
+  /*box-shadow: 0px 5px 4px #c4c4c4;*/
+}
+
+/* Estilos select filter */
+.select-filter {
+ margin-left: 0px;
+ padding: 8px 0;
+ display: inline-block;
+}
+
+
+
+/*formato de la caja de selector*/
+#promo-filter {
+  display:inline-flex;
+  flex:start;
+  font-size: 1.5em;
+  background-color: #f7b617;
+  border: 2px solid;
+  color: #4C4743;
+  border-radius: 3px;
+  font-weight: 300;
+  font-size: 1.2em;
+  padding: .0.25em;
+  margin-left: 22px;
+}
+
+/*cuando paso el raton por la caja de selección*/
+#promo-filter:hover {
+ background-color: #2B2B2B;
+ color: #f7b617;
+ font-weight: 400;
+}
+
+
+#promo-filter:focus{ /*:focus selector is used to select the element that has focus*/
+ outline: none; /*La propiedad CSS outline es una forma reducida para establecer una o más de las propiedades individuales de contorno outline-style, outline-width y outline-color en una sola declaración. En la mayoría de los casos el uso de este atajo es preferible y más conveniente*/
+}
+
+#promo-filter option { /*estilos de cada una de las opciones del selector*/
+ background-color: #fff;
+ color: #4C4743;
+ font-weight: 300;
+}
+
+#promo-filter option:focus { /* focus pero para cada opcion*/
+  outline: none;
+}
+
+
+.tabs { /*estilos para las secciones*/
+  display: inline-block;
+  padding-top: 50px;
+  display: inline-table;
+  padding-right: 100px;
+  margin: 20px
+
+}
+
+.tabs li { /*estilos  para cada una de las secciones*/
+  display:inline-flex;
+  flex: end;
+  font-size: 1.5em;
+  background-color: #f7b617;
+  border: 2px solid;
+  color: #4C4743;
+  border-radius: 3px;
+  font-weight: 300;
+  font-size: 1.2em;
+  padding: .0.25em;
+  margin: 5px;
+  cursor: pointer;
+
+}
+
+.tabs li:hover { /*estilos cuando paso el raton por el selector*/
+  background-color: #2B2B2B;
+  color: #f7b617;
+  border: 2px solid;
+  border-radius: 3px;
+  font-weight: 400;
+}
+
+.tabs li:nth-child(2) {
+  margin: 0 20px;
+}
+h5 {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding: 9px;
+    font-size: 1.07em;
+}
+
+p {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: .7em;
+}
+
+#animated-menu {
+    float:right;
+    height: 1500px;
+    width: 20%;
+    background-color:#4C4743;
+    color:#fff;
+
+
+}
+
+ .daily {
+    border-radius: 3px;
+    margin: 0 auto;
+    height:100px;
+    width: 100px;
+    background: #f7b617;
+}
+
+
+/*--------------------------Estilos del contenedor de las gráficos----------------*/
+main {
+  margin-top: 5px;
+  position: absolute;
+  width: 100%;
+}
+h3 {
+    margin: 0px 24px;
+    font-size: 24px;
+}
+.titulo-seccion2 {
+  margin: 365px 24px;
+  position: absolute;
+}
+.titulo-seccion3 {
+  margin: 7200px 24px;
+  position: absolute;
+}
+/*Contenedor  de gráficas*/
+.container-graphics {
+  overflow: auto; /*La propiedad CSS overflow  especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque*/
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+
+}
+
+/*Contenedor  de las graficas grandes*/
+.big-graphic {
+  background: #f7b617;
+  border-radius: 3px;
+  display: inline-table;
+  height: 300px;
+  padding: 10px;
+  margin: 20px;
+  width: 300px;
+  text-align: center;
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: bold;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(63,66,55,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(63,66,55,1);
+  box-shadow: 10px 10px 5px 0px rgba(63,66,55,1) transparent;
+
+}
+}
+
+/*Estilos de las gráficas*/
+#graphicImg {
+  width:90%;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  margin-rigth: 200px;
+  align-items: center;
+  text-align: center;
+}
+
+/*estilos de las imagens de grafica de forma nomal*/
+.gráficanormal {
+  width: 350px;
+}
+
+/*títulos de la gráfica*/
+.big-graphic span {
+  display: inline-block;
+  /*font-size: 1.3em;*/
+  font-weight: 600;
+  padding: 20px;
+}
+
+/*formato de las cajitas de resultado*/
+.big-graphic .box1, .box2 {
+
+
+  background-color: #f7b617;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 40%;
+  height: 150px;
+  padding: 0.8em;
+  margin-right: 1em;
+  align-items: center;
+}
+
+/*estilos del selector de gráficas grandes*/
+.select-skills {
+  border: none;
+  border-bottom: 1px solid #f7b617;
+  display: inline-block;
+  font-size: 1.1em;
+  padding: 0.4em;
+  border-radius: 3px;
+  font-weight: 300;
+}
+
+/*estilos del selector  al pasar el ratón de gráficas grandes*/
+.select-skills:hover {
+  background-color: #4C4743;
+  color: #ffffff;
+}
+
+/*estilo contenedor de las graficas pequeñas*/
+.small-graphic {
+
+      background: #f7b617;
+      border-radius: 3px;
+      display: inline-table;
+      height: 300px;
+      padding: 10px;
+      margin: 20px;
+      width: 300px;
+      text-align: center;
+      font-size: 1em;
+      font-family: sans-serif;
+      font-weight: bold;
+     -webkit-box-shadow: 10px 10px 5px 0px rgba(63,66,55,1);
+     -moz-box-shadow: 10px 10px 5px 0px rgba(63,66,55,1);
+     box-shadow: 10px 10px 5px 0px rgba(63,66,55,1) transparent;
+
+}
+
+/*contiene todas las gráficas que se van a generar en js en html inicialmente está vacío*/
+.graphic {
+  margin-top: 10px;
+  margin-right:0px;
+  display: inline-block;
+  text-align: center;
+  align-content: center;
+}
+
+/*estilos de las gráficas que se genera en js*/
+.graphic img {
+  padding-left: 1em;
+  padding-bottom: 0.8em;
+  display: absolute;
+  text-align: center;
+  content: center;
+  align-items: center;
+}
+
+/*títulos de las graficas pequeñas*/
+.small-graphic span {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 40px;
+  text-align: center;
+}
+/*estilo de cajitas de resultado*/
+.container-small-boxes {
+  padding: 1em;
+  margin-right:0px;
+  text-align: center;
+  /*padding-left: 50px;*/
+  align-items: center;
+  text-align: center;
+}
+
+/*cajitas de resultado*/
+.small-graphic-boxes {
+  background-color: #f7b617;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 40%;
+  height: 150px;
+  padding: 0.8em;
+  margin-right: 1em;
+  align-items: center;
+}
+
+/*textos de las cajas de resultado*/
+.textDate {
+  display: inline-block;
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: bold;
+  width: 2.7em;
+  height: 1.2em;
+  align-content: center;
+
+}
+
+/*cajas de resultado lo puse siempre en rojo el guion*/
+#dropout-percent {
+  text-align: center;
+}
+
+/*cajas de resultado lo puse siempre en rojo el guion*/
+.texTbox {
+  font-size: .7em;
+  text-align: center;
+  padding-top: 1.2em;
+  align-content: center;
+}
+
+/*el número que aparece dentro del cajitas del resultado*/
+.number-boxes {
+  font-size: 2em;
+  font-weight: 200px;
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+
+/*------------------------------Menu Perfil section----------------------*/
+.menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 15px;
+  transition: 0.5s;
+  background-color: rgba(43, 43, 43, 0.98);
+  color: #fff;
+}
+
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin: -6px -20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.closebtn:hover {
+  color: #f7b617;
+}
+
+
+}
+
+
+/*--------->  Estilos generales <---------*/
+.show {
+  display:block;
+}
+
+.hide {
+  display: none;
+}
+
+/*---------> Estilos para seccion students <---------*/
+.container-students {
+  background: #f5eded;
+  width: 90%;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 1em;
+}
+
+.container-teachers {
+  background: #f5eded;
+  width: 90%;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 1em;
+}
+
+
+
+
+.student-hide {
+  float: right;
+  width: 69%;
+}
+
+.teacher-hide {
+  float: right;
+  width: 69%;
+}
+
+.img-student {
+  float: left;
+  width: 25%;
+  height: 8em;
+}
+
+.img-t {
+  float: left;
+  width: 25%;
+  height: 8em;
+}
+
+.name-student {
+  float: left;
+  vertical-align: top;
+  width: 35%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #4C4743;
+}
+.name-teacher {
+  float: left;
+  vertical-align: top;
+  width: 35%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #4C4743;
+}
+
+
+.profile-student {
+  margin-bottom: 2em;
+  background-color: #ffffff;
+  padding: 1em;
+  overflow: auto;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px #aaa8a8;
+}
+
+.profile-t {
+  margin-bottom: 2em;
+  background-color: #ffffff;
+  padding: 1em;
+  overflow: auto;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px #aaa8a8;
+}
+
+.textoTeacher {
+  float: left;
+  vertical-align: top;
+  background-color: #ffffff;
+  width: 30%;
+  padding: 1em;
+  box-shadow: 2px 2px 2px #aaa8a8;
+}
+
+
+
+.box-tech {
+  background-color: #FFB230;
+  float: left;
+  vertical-align: top;
+  height: 5em;
+  margin-right: 2%;
+  width: 19%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 1px 2px 1px #949292;
+}
+
+.box-life {
+  background-color: #ED6C44;
+  float: left;
+  vertical-align: top;
+  height: 5em;
+  width: 19%;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 1px 2px 1px #949292;
+}
+
+table, th, td
+  {
+      margin:10px 0;
+      border:solid 1px #333;
+      padding:2px 4px;
+      font:15px Verdana;
+  }
+  th {
+      font-weight:bold;
+  }

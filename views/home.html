@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+    </script>
+    <title>Data Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+  </head>
+
+  <body>
+    <header> <!--inicia navegador y barra de selección -->
+      <div>
+       <figure class="box-logo"><!--logo de laboratoria -->
+        <img class="foto-perfil" src="../assets/images/shirley-silvana.jpeg"/>
+        <span><strong>Bienvenida Silvana</strong></span>
+        <img class="logo-header" src="../assets/images/logo-laboratoria.svg" alt="logo laboratoria">
+      <nav class="box-nav">
+        <ul> <!--estos iconos en la parte de arriba desplegaran perfil y chat -->
+          <li><i class="fa fa-bars fa-2x" aria-hidden="true" id="open-animated-menu"></i></li>
+        </ul>
+      </nav>
+      </figure></div>
+    </header>
+
+      <section class="box-filter"> <!--aqui hacemos la selección disponible -->
+        <div class="select-filter">
+          <select name="promo" id="promo-filter"> <!--El elemento optgroup representa un grupo de opciones ( option ) temáticamente definido, que forma parte de un control select . Las opciones agrupadas pueden ser etiquetadas mediante el atributo label , que usarán los navegadores para mostrar como nombre del grupo.-->
+              <option value="" hidden>Selecciona una sede</option>
+              <optgroup label="Arequipa">
+                <option value="AQP" data-year="2016-2">AQP 2016-2</option>
+                <option value="AQP" data-year="2017-1">AQP 2017-1</option>
+              </optgroup>
+              <optgroup label="Lima">
+                <option value="LIM" data-year="2016-2">LIM 2016-2</option>
+                <option value="LIM" data-year="2017-1">LIM 2017-1</option>
+                <option value="LIM" data-year="2017-2">LIM 2017-2</option>
+              </optgroup>
+              <optgroup label="México">
+                <option value="CDMX" data-year="2017-1">CDMX 2017-1</option>
+                <option value="CDMX" data-year="2017-2">CDMX 2017-2</option>
+              </optgroup>
+              <optgroup label="Chile">
+                <option value="SCL" data-year="2016-2">SCL 2016-2</option>
+                <option value="SCL" data-year="2017-1">SCL 2017-1</option>
+                <option value="SCL" data-year="2017-2">SCL 2017-2</option>
+              </optgroup>
+            </select>
+        </div>
+        <ul class="tabs"> <!--aqui seleccióno las secciones que quiero ver-->
+          <li id="overviewTab" class="tab" data-tab-select = 'tabOverview'>General</li>
+          <li id="studentsTab" class="tab" data-tab-select = 'tabStudents'>Alumnas</li>
+          <li id="teachersTab" class="tab" data-tab-select = 'tabTeachers'>Profesores</li>
+        </ul>
+      </section>
+      <h3 class="titulo-seccion1"> Mis estadísticas</h3>
+      <h3 class="titulo-seccion2"> Mi Sede</h3>
+      <h3 class="titulo-seccion3"> General </h3>
+
+      <section class="container-graphics" id="section-overview"> <!--contenedor gráficos-->
+
+        <!-- ENROLLMENT -->
+        <div class="small-graphic">
+          <span>DATO ALUMNAS DE MI SEDE</span>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes"><!--aqui colocaremos los resultados -->
+              <p id="box-enrollment" class="textDate">-</p>
+              <p class="texTbox"># STUDENTS CURRENTLY ENROLLED</p>
+            </div>
+            <div class="small-graphic-boxes"><!--aqui colocaremos los resultados -->
+              <P id="dropout-percent" class="textDate">-</p>
+              <p class="texTbox"> % DROPOUT</p>
+            </div>
+          </div>
+          <div class="graphic" id="enrollment-chart"></div>
+        </div>
+
+        <!-- ACHIEVEMENT -->
+        <div class="small-graphic">
+          <span>ACHIEVEMENT</span>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <p id="box-achievement" class="textDate">-</p>
+              <p class="texTbox"># STUDENTS THAT MEET THE TARGET</p>
+            </div>
+            <div class="small-graphic-boxes">
+              <p id="percent-achievement" class="textDate">-</p>
+              <p id="total-achievement" class="texTbox">% OF TOTAL ()</P>
+            </div>
+          </div>
+          <div class="graphic" id="achiv-chart"></div>
+        </div>
+        <!-- NET PROMOTER SCORE -->
+        <div class="small-graphic">
+          <span>NET PROMOTER SCORE (NPS)</span>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <p id="cumulative-nps" class="textDate">-</p>
+              <p class="texTbox">% CUMULATIVE NPS</p>
+            </div>
+            <div class="small-graphic-boxes">
+              <p id="promoters"></p>
+              <p id="passive"></p>
+              <p id="detractor"></p>
+            </div>
+          </div>
+          <div class="graphic" id="nps-chart"></div>
+        </div>
+        <!-- STUDENT SATISFACTION -->
+        <div class="small-graphic">
+          <span>STUDENT SATISFACTION</span>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <p id="student-satisf" class="textDate">-</p>
+              <p class="texTbox">% MEETING OR EXCEEDING EXPETATIONS (CUMULATIVE)</p>
+            </div>
+          </div>
+          <div class="graphic" id="satisfaction-chart"></div>
+        </div>
+        <!-- TEACHER RATING -->
+        <div class="small-graphic">
+          <span>TEACHER RATING</span>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <P id="teacher-rating" class="textDate">-</P>
+              <P class="texTbox">OVERALL TEACHER RATING (CUMULATIVE)</P>
+            </div>
+          </div>
+          <div class="graphic" id="teacher-chart"></div>
+        </div>
+        <!-- JEDI MASTER RATING -->
+        <div class="small-graphic">
+          <span>JEDI MASTER RATING</span>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <P id="jedi-rating" class="textDate">-</P>
+              <P class="texTbox">OVERALL JEDI RATING (CUMULATIVE)</P>
+            </div>
+          </div>
+          <div class="graphic" id="jedi-chart"></div>
+        </div>
+        <!-- TECH SKILLS -->
+        <div class="big-graphic tech-skills">
+          <div>
+            <span>TECH </span>
+            <select name="overall" id="overall-tech" class="select-skills">
+              <optgroup >
+                <option value="" hidden>SPRINTS</option>
+                <option value="0">Sprint 1</option>
+                <option value="1">Sprint 2</option>
+                <option value="2">Sprint 3</option>
+                <option value="3">Sprint 4</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="boxes-big-graphics">
+            <div class="box1">
+              <p id="students-tech" class="textDate">-</p>
+              <p class="texTbox"># STUDENTS THAT MEET THE TARGET</p>
+            </div>
+            <div class="box2">
+              <p id="percent-tech" class="textDate">-</p>
+              <p id="change-info-tech" class="texTbox">% OF TOTAL</p>
+            </div>
+          </div>
+          <!--<div class="graphic" id="graphicImg">
+            <img class="gráficanormal" src="../assets/images/rectangular-graphic.png" alt="grafico">
+            <img src="../assets/images/circle-graphic.png" alt="grafico">
+            <img src="../assets/images/bar-graph.png" alt="grafico">
+          </div>
+        </div>
+        <!- LIFE SKILLS -->
+        <div class="big-graphic">
+          <div>
+            <span>HSE</span>
+            <select name="overall" id="overall-life" class="select-skills">
+              <optgroup >
+                <option value="" hidden>SPRINTS</option>
+                <option value="0">Sprint 1</option>
+                <option value="1">Sprint 2</option>
+                <option value="2">Sprint 3</option>
+                <option value="3">Sprint 4</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="boxes-big-graphics">
+            <div class="box1">
+              <p id="students-life" class="textDate">-</p>
+              <p class="texTbox"># STUDENTS THAT MEET THE TARGET</p>
+            </div>
+            <div class="box2">
+              <p id="percent-life" class="textDate">-</p>
+              <p id="change-info-life" class="texTbox">% OF TOTAL</p>
+            </div>
+          </div>
+          <!--<div class="graphic" id="graphicImg">
+            <img class="gráficanormal" src="../assets/images/rectangular-graphic.png" alt="grafico">
+            <img src="../assets/images/circle-graphic.png" alt="grafico">
+            <img src="../assets/images/graph.png" alt="grafico">
+          </div>
+        </div>
+      </section>
+        <!-Inicio de Menu que aparece y desaparece-->
+      <section class="menu" id="animated-menu">
+        <a href="javascript:void(0)" class="closebtn" id="close-animated-menu">&times;</a> <!--mi referencia fue -->
+        <h5>¡Felicidades!¡Lo estamos haciendo bien!</h5>
+        <div class="daily"><img src="../assets/images/012-quality.svg"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic suscipit officiis dolore neque quaerat quia possimus eum commodi sit temporibus at, rem blanditiis mollitia earum corrupti omnis nihil beatae sequi!</p>
+        <h5>¡Ánimo!¡Podemos mejorar!</h5>
+        <div class="daily"><img src="../assets/images/006-stats.svg"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic suscipit officiis dolore neque quaerat quia possimus eum commodi sit temporibus at, rem blanditiis mollitia earum corrupti omnis nihil beatae sequi!</p>
+        <h5>¿Qué cosa nueva podríamos probar?</h5>
+        <div class="daily"><img src="../assets/images/011-startup.svg"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic suscipit officiis dolore neque quaerat quia possimus eum commodi sit temporibus at, rem blanditiis mollitia earum corrupti omnis nihil beatae sequi!</p>
+    </section><!--Fin de Menu que aparece y desaparece-->
+
+      <!-- Empieza estudiantes-->
+      <section id="section-students" style="display:none"> <!-- para cambiar de sección este cambia a block en js-->
+
+        <div id="listOfStudents" class="student-hide">
+        </div>
+      </section>
+      <section id="section-teachers" style="display:none" >
+        <h4 class="textoTeacher">No hay base tomamos la misma que estudiantes para tener un previo</h4>
+        <div id="listOfTeachers" class="teacher-hide">
+        </div>
+      </section>
+    </main>
+		<!-- Base de datos -->
+		<script src="../js/data.js"></script>
+		<!-- Aquí va tus archivos JS -->
+    <script src="../js/app.js"></script>
+  </body>
+</html>
